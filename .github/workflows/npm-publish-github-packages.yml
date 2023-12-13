@@ -25,6 +25,7 @@ jobs:
          git config user.email "none"
          git fetch
          git checkout gh-pages
+         git pull
          git reset --hard
          git clean -f -d
          cp -r ${{ runner.temp }}/dist/. .
