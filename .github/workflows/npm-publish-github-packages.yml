@@ -33,7 +33,7 @@ jobs:
          git clean -f -d
          cp -r ${{ runner.temp }}/dist/. .
          git add .
-         git commit -m "deploy" --alow-empty
+         git commit -m "deploy" --allow-empty
          git push
          
          
