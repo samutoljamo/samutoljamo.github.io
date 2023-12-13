@@ -29,8 +29,8 @@ jobs:
          git fetch
          git checkout gh-pages
          git pull
-         git rm -rf .
          git clean -f -d
+         git rm -rf .
          cp -r ${{ runner.temp }}/dist/. .
          git add .
          git commit -m "deploy" --allow-empty
