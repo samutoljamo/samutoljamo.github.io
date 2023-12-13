@@ -17,4 +17,9 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: npm run deploy -- -m "Deployment"
+      - run: npm build
+      - run: |
+         git --version
+         git config user.name "Github Bot"
+         git config user.email "none"
+         git status
