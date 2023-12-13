@@ -19,7 +19,17 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: |
+       
+         mv dist ${{ runner.temp }}/dist
          git --version
          git config user.name "Github Bot"
          git config user.email "none"
-         git status
+         git checkout gh-pages
+         git reset --hard
+         git clean -f -d
+         cp -r ${{ runner.temp }}/dist/. .
+         git add .
+         git commit -m "deploy"
+         git push
+         
+         
