@@ -35,5 +35,3 @@ jobs:
          git add .
          git commit -m "deploy" --allow-empty
          git push
-         
-         

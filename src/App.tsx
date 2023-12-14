@@ -1,34 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Box, Container, Grid, Link, Typography } from '@mui/material'
+
+import {ProjectCard, Social} from "./components"
+import {socials, projects} from "./constants"
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Container maxWidth="lg">
+        <Typography variant="h4" component="h1">Samu Toljamo</Typography>
+        <Box sx={{
+          mt: 2
+        }}>
+          <Link href="/cv.pdf">CV</Link>
+          <Box sx={{
+            display: 'flex',
+            flex: 1,
+            marginTop: 2
+          }}>
+            {socials.map(s => (
+              <Social {...s} />
+            ))}
+          </Box>
+        </Box>
+        <Box sx={{
+          mt: 2
+        }}>
+          <Typography variant="h5" component="h2">Coding projects</Typography>
+          <Grid container spacing={2}>
+            {projects.map(p => (
+              <Grid item xs={12} sm={6} key={p.name}>
+                <ProjectCard {...p} />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </Container>
   )
 }
 
