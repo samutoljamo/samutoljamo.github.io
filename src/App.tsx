@@ -12,7 +12,7 @@ function App() {
         <Box sx={{
           mt: 2
         }}>
-          <Link href="/cv.pdf">CV</Link>
+          <Link href="/resume.pdf">Resume</Link>
           <Box sx={{
             display: 'flex',
             flex: 1,

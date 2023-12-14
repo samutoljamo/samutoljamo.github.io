@@ -38,7 +38,7 @@ const socials = [{
     {
       "name": "This website",
       "description": "This website is a simple responsive static material UI React app",
-      "source": undefined,
+      "source": "https://github.com/samutoljamo/samutoljamo.github.io",
       "demo": "https://samutoljamo.github.io"
     },
     {
