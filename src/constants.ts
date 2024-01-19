@@ -51,7 +51,8 @@ const socials = [{
       "name": "N-body simulator",
       "description": "N-body simulator was created as a team effort during Junction 2023 Hackathon where we won the Veikkaus challenge. The project compares performance of rendering an n-body simulation using WebGPU compute shaders(physics on the gpu) versus using WebGL to render the simulation and making the physics calculations on the CPU in parallel with webworkers",
       "source": "https://github.com/ottohh/Junction2023",
-      "demo": "https://victorious-pond-04b52a903.4.azurestaticapps.net/",
+     // "demo": "https://victorious-pond-04b52a903.4.azurestaticapps.net/",
+      "demo": "https://salmon-flower-043b9a503.4.azurestaticapps.net/",
     },
   ]
 
